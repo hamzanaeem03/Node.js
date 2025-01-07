@@ -10,6 +10,13 @@ import express from "express";
 const app = express();
 const PORT = 4000;
 
+function middleware (req, res, next){
+console.log("something like date",Date.now())
+next()
+}
+
+app.use(middleware)
+
 app.get("/", (req, res) => {
   res.status(200).send(tasks);
   // console.log('first api')
