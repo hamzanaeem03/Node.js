@@ -19,8 +19,8 @@ app.use(middleware)
 
 app.get("/", (req, res) => {
   res.status(200).send(tasks);
-  // console.log('first api')
-  // res.send('this is response')
+  console.log('first api')
+  res.send('this is response')
 });
 
 app.post("/", (req, res) => {
